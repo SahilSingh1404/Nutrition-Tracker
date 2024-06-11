@@ -1,0 +1,56 @@
+.search-results {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+}
+
+.item {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content:space-between;
+}
+
+.item:hover {
+    background-color: #0a5e43;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #161616;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.search {
+    position: relative;
+}
+
+.search-inp {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.item-name {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.item-protein {
+    flex: 1;
+}
+
+.track-container.back {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
