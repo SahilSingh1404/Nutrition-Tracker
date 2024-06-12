@@ -39,3 +39,7 @@ input[type="date"] {
     background-position: center;
     background-size:cover;
 }
+
+.delete-icon{
+    margin-left: 10px;
+}

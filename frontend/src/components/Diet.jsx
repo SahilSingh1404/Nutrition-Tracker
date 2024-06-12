@@ -129,8 +129,9 @@ export default function Diet() {
                 return (
                     <div className="item" key={item._id}>
                         <h3>{item.foodId.name} ( {item.details.calories} Kcal for {item.quantity}g )</h3>
-                        <p>Protein {item.details.protein.toFixed(4)}g, Carbs {item.details.carbohydrates.toFixed(4)}g, Fats {item.details.fat.toFixed(4)}g, Fiber {item.details.fiber.toFixed(4)}g</p>
-                        <FaTimes className="delete-icon" onClick={() => deleteItem(item._id)} />
+                        <p>Protein {item.details.protein.toFixed(4)}g, Carbs {item.details.carbohydrates.toFixed(4)}g, Fats {item.details.fat.toFixed(4)}g, Fiber {item.details.fiber.toFixed(4)}g 
+                          <FaTimes className="delete-icon" onClick={() => deleteItem(item._id)} />
+                        </p>
                     </div>
                 );
             })}
