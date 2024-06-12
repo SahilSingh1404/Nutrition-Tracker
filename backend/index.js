@@ -1,21 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const punycode = require('punycode');
-
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-
 const cors = require('cors');
 require('dotenv').config();
 
-// importing models 
 const userModel = require('./models/userModel')
 const foodModel = require("./models/foodModel")
 const trackingModel = require("./models/trackingModel")
 const verifyToken = require("./verifyToken")
 
 const mongoURL = process.env.MONGODB_URL
-// database connection 
 mongoose.connect(mongoURL,
 
 ).then(() => {
@@ -24,19 +20,14 @@ mongoose.connect(mongoURL,
     console.error('Database connection error:', err);
   });
 
-
-
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-
-// endpoint for registering user 
 app.post("/register", (req,res)=>{
     
     let user = req.body;
-   
 
     bcrypt.genSalt(10,(err,salt)=>{
         if(!err)

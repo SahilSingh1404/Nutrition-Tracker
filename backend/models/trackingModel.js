@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 const trackingSchema = mongoose.Schema({
     userId:{
         type:mongoose.Schema.Types.ObjectId,

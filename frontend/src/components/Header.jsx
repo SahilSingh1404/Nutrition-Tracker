@@ -16,7 +16,7 @@ export default function Header() {
 
     return (
         <div className="navbar">
-             <div className="navbar-brand">
+            <div className="navbar-brand">
                 <img src={logo} alt="Logo" className="navbar-logo" />
             </div>
             {/* <div className="navbar-brand">Nutrify</div> */}

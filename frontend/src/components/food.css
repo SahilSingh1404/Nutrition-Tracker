@@ -8,11 +8,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-body{
+body {
     background-color: #161616;
 }
 
-.food-container{
+.food-container {
     margin: auto;
 }
 
@@ -89,16 +89,15 @@ body{
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .btn.disabled {
-    background-color: #adb5bd; 
-    cursor: not-allowed;
-  }
+}
 
-  .btn.success {
+.btn.disabled {
+    background-color: #adb5bd;
+    cursor: not-allowed;
+}
+
+.btn.success {
     background-color: #4CAF50;
     color: white;
     cursor: not-allowed;
 }
-  

@@ -19,9 +19,7 @@ export default function Diet() {
     });
 
     useEffect(() => {
-        // Fetch data only if date is selected
         if (date !== null) {
-            // Convert the date to IST
             const istDate = new Date(date.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
             // fetch(`http://localhost:8000/track/${loggedData.loggedUser.userid}/${istDate.getMonth() + 1}-${istDate.getDate()}-${istDate.getFullYear()}`, {
             fetch(`${backendUrl}/track/${loggedData.loggedUser.userid}/${istDate.getMonth() + 1}-${istDate.getDate()}-${istDate.getFullYear()}`, {
@@ -86,7 +84,6 @@ export default function Diet() {
         })
         .then((response) => {
             if (response.ok) {
-                // Remove the item from the UI
                 setItems((prevItems) => prevItems.filter(item => item._id !== foodId));
                 console.log(`Item with id: ${foodId} deleted`);
             } else {
@@ -98,7 +95,7 @@ export default function Diet() {
         });
     }
     
-    const IST_OFFSET = 5.5; // IST is UTC+5.5
+    const IST_OFFSET = 5.5;
 
     const toIST = (date) => {
         const offsetInMillis = date.getTimezoneOffset() * 60 * 1000; // Offset in milliseconds

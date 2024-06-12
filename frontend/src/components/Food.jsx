@@ -59,18 +59,18 @@ export default function Food(props) {
                 "Content-Type": "application/json"
             }
         })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            setButtonState("success");
-            setTimeout(() => setButtonState("default"), 3000);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                setButtonState("success");
+                setTimeout(() => setButtonState("default"), 3000);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }
 
-    return (    
+    return (
         <div className="food">
             <div className="food-img">
                 <img className="food-image" src={food.imageUrl} alt={food.name} />
@@ -97,16 +97,16 @@ export default function Food(props) {
                 <p className="n-value">{food.calories}g</p>
             </div>
             <div className="track-control">
-                <input 
-                    type="number" 
-                    onChange={calculateMacros} 
-                    className="inp" 
-                    placeholder="Quantity in Gms" 
+                <input
+                    type="number"
+                    onChange={calculateMacros}
+                    className="inp"
+                    placeholder="Quantity in Gms"
                     min="1"
                 />
-                <button 
-                    className={`btn ${!isQuantityEntered ? 'disabled' : ''} ${buttonState === "success" ? 'success' : ''}`} 
-                    onClick={trackFoodItem} 
+                <button
+                    className={`btn ${!isQuantityEntered ? 'disabled' : ''} ${buttonState === "success" ? 'success' : ''}`}
+                    onClick={trackFoodItem}
                     disabled={!isQuantityEntered}
                 >
                     {buttonState === "success" ? 'Tracked' : 'Track'}

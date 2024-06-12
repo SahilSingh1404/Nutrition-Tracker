@@ -11,41 +11,39 @@ import { UserContext } from './contexts/UserContext'
 import { useEffect, useState } from 'react'
 import Diet from './components/Diet'
 
-
-
 function App() {
- 
-  const [loggedUser,setLoggedUser] 
-  = useState(JSON.parse(localStorage.getItem("nutrify-user")));
 
-  
+  const [loggedUser, setLoggedUser]
+    = useState(JSON.parse(localStorage.getItem("nutrify-user")));
+
+
 
   return (
     <>
 
-    
-      <UserContext.Provider value={{loggedUser,setLoggedUser}}>
 
-          <BrowserRouter>   
+      <UserContext.Provider value={{ loggedUser, setLoggedUser }}>
 
-              <Routes>
+        <BrowserRouter>
 
-                  <Route path='/' element={<Login/>}/>
-                  <Route path='/login' element={<Login/>}/>
-                  <Route path='/register' element={<Register/>}/>
-                  <Route path='/track' element={<Private Component={Track}/>}/>
-                  <Route path='/diet' element={<Private Component={Diet}/>}/>
-                  
-                  <Route path='*' element={<Notfound/>}/>
+          <Routes>
 
-              </Routes>
-        
-            </BrowserRouter>
-       
+            <Route path='/' element={<Login />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/track' element={<Private Component={Track} />} />
+            <Route path='/diet' element={<Private Component={Diet} />} />
 
-        </UserContext.Provider>
+            <Route path='*' element={<Notfound />} />
 
-        
+          </Routes>
+
+        </BrowserRouter>
+
+
+      </UserContext.Provider>
+
+
     </>
   )
 }
