@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const punycode = require('punycode');
 
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -15,10 +16,9 @@ const verifyToken = require("./verifyToken")
 
 const mongoURL = process.env.MONGODB_URL
 // database connection 
-mongoose.connect(mongoURL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  }).then(() => {
+mongoose.connect(mongoURL,
+
+).then(() => {
     console.log('Database connection successful');
   }).catch((err) => {
     console.error('Database connection error:', err);
