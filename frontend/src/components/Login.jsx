@@ -1,6 +1,7 @@
 import { useState,useContext, useEffect } from "react"
 import { UserContext } from "../contexts/UserContext";
 import { Link,useNavigate } from "react-router-dom"
+import "./login.css"
 
 const backendUrl = 'https://nutrify-webapp-qlr8.onrender.com';
 
@@ -65,7 +66,7 @@ export default function Login()
         })
     }
     return (
-        <section className="container">
+        <section className="container" style={{background:"yellow"}}>
 
             <form className="form" onSubmit={handleSubmit}>
                 <h1>Login To Fitness</h1>

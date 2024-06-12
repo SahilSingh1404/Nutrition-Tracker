@@ -63,7 +63,7 @@ export default function Register()
 
         }
     return (
-        <section className="container">
+        <section className="container" style={{background:"yellow"}}>
 
             <form className="form" onSubmit={handleSubmit}>
 
