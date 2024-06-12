@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const cors = require('cors');
-
+require('dotenv').config();
 
 // importing models 
 const userModel = require('./models/userModel')
@@ -13,15 +13,16 @@ const foodModel = require("./models/foodModel")
 const trackingModel = require("./models/trackingModel")
 const verifyToken = require("./verifyToken")
 
+const mongoURL = process.env.MONGODB_URL
 // database connection 
-mongoose.connect("mongodb://localhost:27017/nutrify")
-.then(()=>{
-    console.log("Database connection successfull")
-})
-.catch((err)=>{
-    console.log(err);
-})
-
+mongoose.connect(mongoURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }).then(() => {
+    console.log('Database connection successful');
+  }).catch((err) => {
+    console.error('Database connection error:', err);
+  });
 
 
 
