@@ -68,7 +68,6 @@ export default function Diet() {
             totalCopy.totalFats += item.details.fat;
             totalCopy.totalFiber += item.details.fiber;
         });
-
         setTotal(totalCopy);
     }
 

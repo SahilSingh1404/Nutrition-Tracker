@@ -86,7 +86,6 @@ export default function Register() {
                 <p className={message.type}>{message.text}</p>
 
             </form>
-
         </section>
     )
 }

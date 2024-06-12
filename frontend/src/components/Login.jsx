@@ -74,7 +74,6 @@ export default function Login() {
                 <button className="btn">Login</button>
 
                 <p>Dont Have a Account ? <Link to="/register">Register Now</Link></p>
-
                 <p className={message.type}>{message.text}</p>
             </form>
         </section>

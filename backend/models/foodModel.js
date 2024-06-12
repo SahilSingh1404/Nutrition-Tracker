@@ -7,7 +7,6 @@ const foodSchema = mongoose.Schema({
     },
     imageUrl:{
         type:String,
-        // required:true
     },
     calories:{
         type:Number,
@@ -31,7 +30,6 @@ const foodSchema = mongoose.Schema({
     }
 
 },{timestamps:true})
-
 
 const foodModel = mongoose.model("foods",foodSchema)
 

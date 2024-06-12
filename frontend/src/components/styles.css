@@ -7,7 +7,7 @@
     z-index: 1;
 }
 
-.item {
+.item{
     padding: 10px;
     cursor: pointer;
     display: flex;

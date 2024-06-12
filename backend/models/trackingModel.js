@@ -18,7 +18,6 @@ const trackingSchema = mongoose.Schema({
         carbohydrates:Number,
         fat:Number,
         fiber:Number,
-       
     },
     eatenDate:{
         type:String,
@@ -30,7 +29,6 @@ const trackingSchema = mongoose.Schema({
         required:true
     }
 },{timestamps:true})
-
 
 const trackingModel = mongoose.model("trackings",trackingSchema);
 

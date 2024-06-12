@@ -59,8 +59,8 @@ export default function Food(props) {
                 "Content-Type": "application/json"
             }
         })
-            .then((response) => response.json())
-            .then((data) => {
+        .then((response) => response.json())
+        .then((data) => {
                 console.log(data);
                 setButtonState("success");
                 setTimeout(() => setButtonState("default"), 3000);

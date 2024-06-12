@@ -8,7 +8,7 @@ export default function Header() {
     const loggedData = useContext(UserContext);
     const navigate = useNavigate();
 
-    function logout() {
+    function logout(){
         localStorage.removeItem("nutrify-user");
         loggedData.setLoggedUser(null);
         navigate("/login");

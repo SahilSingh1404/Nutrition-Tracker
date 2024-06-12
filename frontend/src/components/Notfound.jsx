@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-export default function Notfound() {
+export default function Notfound(){
     return (
         <section className="container nf">
             <div className="not-found">

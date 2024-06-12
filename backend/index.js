@@ -26,9 +26,7 @@ app.use(express.json());
 app.use(cors());
 
 app.post("/register", (req,res)=>{
-    
     let user = req.body;
-
     bcrypt.genSalt(10,(err,salt)=>{
         if(!err)
         {

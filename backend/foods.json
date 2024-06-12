@@ -1,5 +1,5 @@
 [
-{
+        {
         "name": "Milk",
         "calories": 150,
         "protein": 8,
@@ -8,7 +8,7 @@
         "fiber": 0,
         "imageUrl": "https://cdn.britannica.com/77/200377-050-4326767F/milk-splashing-glass.jpg?w=400&h=300&c=crop"
     },
-    {
+        {
         "name": "Rice",
         "calories": 206,
         "protein": 4,
