@@ -30,7 +30,7 @@ export default function Register()
         function handleSubmit(event)
         {
             event.preventDefault();
-            // console.log(userDetails);
+            console.log(userDetails);
 
             // fetch("http://localhost:8000/register",{
             fetch(`${backendUrl}/register`,{
