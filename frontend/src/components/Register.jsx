@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+const backendUrl = 'https://nutrify-webapp-qlr8.onrender.com';
+
 export default function Register()
 {
         const [userDetails,setUserDetails] = useState({
@@ -14,10 +16,6 @@ export default function Register()
             type:"invisible-msg",
             text:"Dummy Msg"
         })
-
-       
-
-
         function handleInput(event)
         {
             
@@ -34,7 +32,8 @@ export default function Register()
             event.preventDefault();
             // console.log(userDetails);
 
-            fetch("http://localhost:8000/register",{
+            // fetch("http://localhost:8000/register",{
+            fetch(`${backendUrl}/register`,{
                 method:"POST",
                 body:JSON.stringify(userDetails),
                 headers:{
@@ -57,21 +56,12 @@ export default function Register()
                     setMessage({type:"invisible-msg",text:"Dummy sg"});
                 },5000)
 
-
-
-
-
             })
             .catch((err)=>{
                 console.log(err);
             })
-            
-
-
 
         }
-
-       
     return (
         <section className="container">
 
@@ -100,11 +90,6 @@ export default function Register()
                 <p className={message.type}>{message.text}</p>
 
             </form>
-
-
-          
-
-           
 
         </section>
     )

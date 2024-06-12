@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import './food.css';
+const backendUrl = 'https://nutrify-webapp-qlr8.onrender.com';
 
 export default function Food(props) {
     const [eatenQuantity, setEatenQuantity] = useState(100);
@@ -49,7 +50,8 @@ export default function Food(props) {
             quantity: eatenQuantity
         };
 
-        fetch("http://localhost:8000/track", {
+        // fetch("http://localhost:8000/track", {
+        fetch(`${backendUrl}/track`, {
             method: "POST",
             body: JSON.stringify(trackedItem),
             headers: {

@@ -4,6 +4,8 @@ import Header from './Header';
 import './diet.css';
 import { FaTimes } from 'react-icons/fa';
 
+const backendUrl = 'https://nutrify-webapp-qlr8.onrender.com';
+
 export default function Diet() {
     const loggedData = useContext(UserContext);
     const [items, setItems] = useState([]);
@@ -21,7 +23,8 @@ export default function Diet() {
         if (date !== null) {
             // Convert the date to IST
             const istDate = new Date(date.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
-            fetch(`http://localhost:8000/track/${loggedData.loggedUser.userid}/${istDate.getMonth() + 1}-${istDate.getDate()}-${istDate.getFullYear()}`, {
+            // fetch(`http://localhost:8000/track/${loggedData.loggedUser.userid}/${istDate.getMonth() + 1}-${istDate.getDate()}-${istDate.getFullYear()}`, {
+            fetch(`${backendUrl}/track/${loggedData.loggedUser.userid}/${istDate.getMonth() + 1}-${istDate.getDate()}-${istDate.getFullYear()}`, {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${loggedData.loggedUser.token}`
@@ -72,7 +75,8 @@ export default function Diet() {
     }
 
     function deleteItem(foodId) {
-        const url = `http://localhost:8000/track/${loggedData.loggedUser.userid}/${foodId}`;
+        // const url = `http://localhost:8000/track/${loggedData.loggedUser.userid}/${foodId}`;
+        const url = `${backendUrl}/track/${loggedData.loggedUser.userid}/${foodId}`;
         console.log(`Deleting item with URL: ${url}`);
         fetch(url, {
             method: "DELETE",

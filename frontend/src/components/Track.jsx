@@ -4,6 +4,8 @@ import Food from "./Food";
 import Header from './Header';
 import './styles.css';
 
+const backendUrl = 'https://nutrify-webapp-qlr8.onrender.com';
+
 export default function Track() {
     const loggedData = useContext(UserContext);
 
@@ -17,7 +19,8 @@ export default function Track() {
     }, []);
 
     const fetchAllFoodItems = () => {
-        fetch("http://localhost:8000/foods", {
+        // fetch("http://localhost:8000/foods", {
+        fetch(`${backendUrl}/foods`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${loggedData.loggedUser.token}`
@@ -44,7 +47,8 @@ export default function Track() {
     const handleSearchInputChange = (event) => {
         setSearchValue(event.target.value);
         if (event.target.value.length !== 0) {
-            fetch(`http://localhost:8000/foods/${event.target.value}`, {
+            // fetch(`http://localhost:8000/foods/${event.target.value}`, {
+            fetch(`${backendUrl}/foods/${event.target.value}`, {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${loggedData.loggedUser.token}`
