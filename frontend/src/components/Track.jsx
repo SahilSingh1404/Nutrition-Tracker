@@ -4,7 +4,7 @@ import Food from "./Food";
 import Header from './Header';
 import './styles.css';
 
-const backendUrl = 'https://nutrify-webapp-qlr8.onrender.com';
+const backendUrl = 'https://nutrition-tracker-ob94.onrender.com';
 
 export default function Track() {
     const loggedData = useContext(UserContext);

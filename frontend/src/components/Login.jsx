@@ -3,7 +3,7 @@ import { UserContext } from "../contexts/UserContext";
 import { Link, useNavigate } from "react-router-dom"
 import "./login.css"
 
-const backendUrl = 'https://nutrify-webapp-qlr8.onrender.com';
+const backendUrl = 'https://nutrition-tracker-ob94.onrender.com';
 
 export default function Login() {
     const loggedData = useContext(UserContext);
