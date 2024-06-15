@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const backendUrl = 'https://nutrition-tracker-ob94.onrender.com';
+const backendUrl = 'https://nutrition-tracker-sgsw.onrender.com';
 
 
 export default function Register() {
