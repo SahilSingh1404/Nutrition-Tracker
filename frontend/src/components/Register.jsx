@@ -61,7 +61,7 @@ export default function Register() {
 
     }
     return (
-        <section className="container" style={{ background: "yellow" }}>
+        <section className="container" style={{ background: "black" }}>
 
             <form className="form" onSubmit={handleSubmit}>
 
